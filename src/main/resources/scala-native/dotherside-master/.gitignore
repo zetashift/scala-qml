@@ -1,0 +1,13 @@
+*.*~
+build*
+*.pro.*
+*.o
+.directory
+#*#
+nimcache
+*.kdev4
+*.user
+.idea
+*.orig
+doc
+cmake-build-*
