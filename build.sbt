@@ -12,22 +12,24 @@ bindgenBindings := Seq(
     .withCImports(
       List(
         "DOtherSide.h",
-        "DosIQAbstractItemModelImpl.h",
-        "DosQObjectImpl.h",
-        "DosIQObjectImpl.h",
-        "DosQObjectWrapper.h",
-        "DosLambdaInvoker.h",
-        "DosQQuickImageProvider.h",
-        "DosQAbstractItemModel.h",
-        "DosQtCompatUtils.h",
-        "DosQAbstractItemModelWrapper.h",
-        "DOtherSide.h",
-        "DosQDeclarative.h",
-        "DOtherSideTypesCpp.h",
-        "DosQMetaObject.h",
-        "DOtherSideTypes.h",
-        "DosQObject.h",
-        "Utils.h"
+        "DOtherSide/DosIQAbstractItemModelImpl.h",
+        "DOtherSide/DosQObjectImpl.h",
+        "DOtherSide/DosIQObjectImpl.h",
+        "DOtherSide/DosQObjectWrapper.h",
+        "DOtherSide/DosLambdaInvoker.h",
+        "DOtherSide/DosQQuickImageProvider.h",
+        "DOtherSide/DosQAbstractItemModel.h",
+        "DOtherSide/DosQtCompatUtils.h",
+        "DOtherSide/DosQAbstractItemModelWrapper.h",
+        "DOtherSide/DOtherSide.h",
+        "DOtherSide/DosQDeclarative.h",
+        "DOtherSide/DOtherSideTypesCpp.h",
+        "DOtherSide/DosQMetaObject.h",
+        "DOtherSide/DOtherSideTypes.h",
+        "DOtherSide/DosQObject.h",
+        "DOtherSide/Utils.h"
       )
-    ).build
+    )
+    .addClangFlag("-I" + baseDirectory.value / "src" / "main" / "resources" / "scala-native")
+    .build
 )
